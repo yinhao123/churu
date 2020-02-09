@@ -1,10 +1,15 @@
-# 云开发 quickstart
+# 出入管理小程序
+可以通过扫描小程序生成的小程序二维码，方便信息登记，减少纸质登记，减少人员接触。
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+小程序使用了微信的**云开发**，无需单独部署后端服务器，节省使用成本降低开发难度。
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+## 小程序截图
+![小程序主页](https://github.com/yinhao123/churu/blob/master/doc/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202002091756573.jpg ''小程序截图'')
+![小程序截图](https://github.com/yinhao123/churu/blob/master/doc/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200209175657.jpg ''小程序截图'')
+![小程序主页](https://github.com/yinhao123/churu/blob/master/doc/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202002091756573.jpg ''小程序截图'')
+![小程序主页](https://github.com/yinhao123/churu/blob/master/doc/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202002091756573.jpg ''小程序截图'')
+![小程序主页](https://github.com/yinhao123/churu/blob/master/doc/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202002091756573.jpg ''小程序截图'')
+
 
 ## 参考文档
 
