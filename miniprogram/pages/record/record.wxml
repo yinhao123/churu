@@ -1,0 +1,31 @@
+<!--pages/record/record.wxml-->
+<view class="padding ">
+    <view>
+     <view wx:for="{{recordList}}" wx:key="index">
+     {{index}}: {{item._openid}}-{{item.date}}/{{item.date}}-{{item.remark}}
+    </view>
+    </view>
+</view>
+
+
+
+<view class="padding">
+
+ <view class="cu-list menu-avatar">
+    <view  class="cu-item" wx:for="{{recordList}}" wx:key="index">
+      <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">{{item._openid}}</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="cuIcon-infofill text-red  margin-right-xs"></text>备注：{{item.remark}}
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">22:20</view>
+        <view class="cu-tag round bg-grey sm">5</view>
+      </view>
+    </view>
+  </view>
+</view>

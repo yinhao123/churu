@@ -1,0 +1,37 @@
+<!--我也要用页面-->
+<view class="padding">
+<form bindsubmit="formSubmit margin-top">
+
+ <view class="cu-form-group ">
+		<view class="title">单位名称</view>
+		<input name="name" value="{{name}}" placeholder="请输入社区/小区的名称"></input>
+</view>
+
+<view class="cu-form-group ">
+		<view class="title">选择城市</view>
+		<picker name="city" mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region[0]}} - {{region[1]}} - {{region[2]}}
+			</view>
+		</picker>
+</view>
+ <view class="cu-form-group ">
+		<view class="title">登记地址</view>
+		<input name="address" value="{{address}}" placeholder="请输入社区/小区详细地址"></input>
+</view>
+
+ <view class="cu-form-group">
+		<view class="title">联系人员</view>
+		<input name="linkperson" value="{{linkperson}}" placeholder="请输入联系人员的真实姓名"></input>
+</view>  
+ <view class="cu-form-group">
+		<view class="title">联系方式</view>
+		<input name="phonenumber" value="{{phonenumber}}"  placeholder="请输入联系人员的手机号码"></input>
+	</view> 
+  <view wx:if="{{show}}" class="flex margin-top">
+   <button disabled="{{show}}" form-type="submit" class="cu-btn bg-blue lg">保存</button>
+  </view>
+</form>
+
+
+</view>

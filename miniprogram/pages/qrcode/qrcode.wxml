@@ -1,0 +1,16 @@
+<!--pages/qrcode/qrcode.wxml-->
+<view class="margin-top-xl ">
+  <view class="qrcodeimg flex justify-center margin-top-xl">
+  <view class="imageview">
+      <image src="{{imageurl}}" mode="aspectFill"></image>
+  </view>
+  
+  </view>
+  <view class="flex margin-top-xl">
+   <button bindtap="saveQrcode" class="cu-btn bg-blue lg">保存二维码到手机</button>
+</view>
+  <view class=" margin-top-xl ">
+
+    <view class="text-sm text-gray text-left padding margin cuIcon-creative">将该二维码保存到手机相册后，自行通过打印机打印该二维码，可将该二维码张贴在社区/小区出入口处，方便用户扫描登记。</view>
+  </view>
+</view>

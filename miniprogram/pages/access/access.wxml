@@ -1,0 +1,50 @@
+<view class="padding">
+  <form bindsubmit="formSubmit">
+  <view class="cu-form-group margin-top">
+      <view class="title">单位名称</view>
+      <input placeholder="社区名称" value="{{name}}" disabled="true"></input>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">姓名</view>
+      <input placeholder="申请人姓名" value="{{username}}" disabled="true"></input>
+    </view>
+
+    <radio-group class="block margin-top">
+
+      <view class="cu-form-group">
+        <view class="title">申请出门</view>
+        <radio checked class="red "></radio>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">申请进入</view>
+        <radio class="green"></radio>
+      </view>
+    </radio-group>
+
+
+    <view class="cu-form-group margin-top">
+      <view class="title">是否健康</view>
+      <switch checked></switch>
+    </view>
+    <view class="cu-form-group ">
+      <view class="title">体温</view>
+      <input name="temperature" placeholder="请输入体温" ></input>
+    </view>
+
+   <view class="cu-form-group align-start margin-top">
+		<view class="title">备注</view>
+		<textarea name="remark" maxlength="-1" disabled="{{modalName!=null}}"               bindinput="textareaBInput" placeholder="请输入备注"></textarea>
+	  </view>
+
+ <view class="padding flex flex-direction">
+  <button form-type="submit" class="cu-btn bg-blue lg">提交</button>
+  
+</view>
+
+  </form>
+
+  <!-- <view class="padding flex flex-direction">
+  <button class="cu-btn bg-blue lg">提交</button>
+  
+</view> -->
+</view>

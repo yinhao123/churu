@@ -1,0 +1,13 @@
+<view class='margin-xl bg-gradual-blue padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  '>关于出入管理系统</view>
+  <view class='text-content'>
+    <view>Hi！各位出入管理的使用者！</view>
+    <view class='margin-top-sm'>该项目是一款管理社区出入微信小程序。该项目有如下特点：</view>
+     <view class='margin-top-sm'>省时：微信扫一扫即可登记，减少人员接触和聚集。</view>
+     <view class='margin-top-sm'>省力：无需重复输入信息，出入信息登记准确。</view>
+    <view class='margin-top-sm'>查询便捷：管理人员方便查看登记信息。</view>
+    <view class='margin-top-sm'>统计方便：方便导出出入日志信息。进行进一步统计。</view>
+    <view class='margin-top-sm'>如有问题，请发送邮件到yinhao1205@qq.com。</view>
+    <view class='margin-top-sm'>更多功能敬请期待！ ٩(๑❛ᴗ❛๑)۶</view>
+  </view>
+</view>

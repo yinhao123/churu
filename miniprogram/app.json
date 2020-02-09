@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/center/center",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+   
+    "pages/userinfo/userinfo",
+    "pages/access/access",
+    "pages/areainfo/areainfo",
+    "pages/linkus/linkus",
+    "pages/arealist/arealist",
+    "pages/qrcode/qrcode",
+    "pages/userlist/userlist",
+    "pages/record/record"
+  
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0081ff",
+    "navigationBarTitleText": "出入管理",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
