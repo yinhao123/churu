@@ -17,8 +17,12 @@ Page({
     })
     var _this = this;
       // 请求云函数生成二维码,参数是当前用户的社区id
+    console.log("scene: "+getApp().globalData.scene);
     wx.cloud.callFunction({
       name:'qrcode',
+      data:{
+        scene:getApp().globalData.scene
+      },
       // 成功回调
       success: function (res) {
         console.log(res.result.buffer);
@@ -29,12 +33,7 @@ Page({
             imageurl: res
           });
           wx.hideLoading();
-          console.log("二维码地址");
-          console.log(res) // 返回图片地址，直接赋值到image标签即可
         });
-        // _this.setData({
-        //   imageurl: 'data:image/jpg;base64,'+imagebase64
-        // })
       },
     })
   },
@@ -115,7 +114,7 @@ Page({
     if (!format) {
       return (new Error('ERROR_BASE64SRC_PARSE'));
     }
-    const filePath = `${wx.env.USER_DATA_PATH}/${'tmp_base64src'}.${format}`;
+    const filePath = `${wx.env.USER_DATA_PATH}/${'wx_qrcode'}.${format}`;
     const buffer = wx.base64ToArrayBuffer(bodyData);
     wx.getFileSystemManager().writeFile({
       filePath,

@@ -3,14 +3,14 @@
   <!-- 社区管理页面 -->
   <view class="padding radius shadow">
       <view class="cu-list menu text-left solid-top">
-       <view class="cu-item" bindtap="navaToUserListPage">
+       <!-- <view class="cu-item" bindtap="navaToUserListPage">
             <view class="content">
               <text class="text-grey">用户列表</text>
             </view>
             <view class="action text-xxl">
              <view class="cuIcon-group "></view>
             </view>
-          </view>
+          </view> -->
           <view class="cu-item" bindtap="navToRecordPage">
             <view class="content">
               <text class="text-grey">出入日志</text>

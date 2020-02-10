@@ -1,0 +1,20 @@
+<view class="page">
+    <mp-msg type="success" title="申请成功">
+        <view slot="desc">您的信息已经提交成功，请将该页面给查岗员查阅。</view>
+        <view slot="extend">
+            <view>出入人员：{{userinfo.username}}</view>
+            <view>联系方式：{{userinfo.phonenumber}}</view>
+            <view>今日体温：{{res.data.temperature}}</view>
+        </view>
+        <view slot="handle">
+            <button class="weui-btn" bindtap="navToIndexPage" type="primary">回到首页</button>
+            <!-- <button class="weui-btn" type="default">查看信息</button> -->
+        </view>
+        <view slot="footer">
+            <view class="weui-footer__links">
+                <!-- <navigator url="" class="weui-footer__link">底部链接文本</navigator> -->
+            </view>
+            <view class="weui-footer__text">Copyright © 2020 出入管理小程序</view>
+        </view>
+    </mp-msg>
+</view>

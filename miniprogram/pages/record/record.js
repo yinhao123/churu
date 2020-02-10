@@ -6,7 +6,8 @@ Page({
    */
   data: {
       areaid:'',// 小区id
-      recordList:{}
+      recordList:{},
+      list:{}
   },
 
   /**
@@ -26,28 +27,51 @@ Page({
       _openid:openid 
     }).get({
       success: function (res) {
-        console.log(res);
-        // 获取当前用的的小区id
-        console.log(res.data[0]._id);
         // 通过小区的id查询记录
         db.collection('system_record').where({
           areaid: res.data[0]._id
         }).get({
           success:function(res){
-
-           console.log( res.data);
+         //  console.log( res.data);
             _this.setData({
               recordList:res.data
             })    
           }
         })
+        
+
+
         _this.setData({
           areaid: res.data[0]._id
         })
       }
     }
     )
+    
+    console.log("recordLists...........");
+
+    wx.cloud.callFunction({
+      name:'getrecordlist',
+      success:function(res){
+        console.log(res);
+        console.log(res.result.list);
+        _this.setData({
+          list: res.result.list
+        })
+      }
+    })
     wx.hideLoading();
+    // const db = cloud.database()
+    // db.collection('system_record').aggregate()
+    //   .lookup({
+    //     from: 'system_user',
+    //     localField: '_openid',
+    //     foreignField: '_openid',
+    //     as: 'recordLists',
+    //   })
+    //   .end()
+    //   .then(res => console.log(res))
+    //   .catch(err => console.error(err))
 
   },
 

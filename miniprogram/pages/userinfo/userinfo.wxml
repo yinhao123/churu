@@ -1,15 +1,15 @@
 <view class="padding">
 <form bindsubmit="formSubmit">
 	<view class="cu-form-group margin-top">
-		<view class="title">姓名</view>
+		<view class="title">用户姓名</view>
 		<input name="username" value="{{username}}" placeholder=" 请输入姓名"></input>
 	</view>
 	<view class="cu-form-group">
-		<view class="title">身份证</view>
+		<view class="title">身份证号</view>
 		<input name="idcard" value="{{idcard}}" placeholder="请输入身份证号码"></input>
 	</view>
   <view class="cu-form-group">
-		<view class="title">手机号</view>
+		<view class="title">手机号码</view>
 		<input name="phonenumber" value="{{phonenumber}}" placeholder="请输入手机号码"></input>
 	</view>
   <!-- <view class="cu-form-group">

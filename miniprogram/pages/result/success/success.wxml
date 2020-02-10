@@ -1,0 +1,19 @@
+<view class="page">
+    <mp-msg type="success" title="操作成功">
+        <view slot="desc">感谢使用，您的信息已经提交成功，请将该页面给查岗员查阅，以便您能通过出入口。<navigator url="" class="weui-msg__link">文字链接</navigator></view>
+        <view slot="extend">
+            <view>1. 说明1</view>
+            <view>2. 说明2</view>
+        </view>
+        <view slot="handle">
+            <button class="weui-btn" type="primary">回到首页</button>
+            <button class="weui-btn" type="default">查看信息</button>
+        </view>
+        <view slot="footer">
+            <view class="weui-footer__links">
+                <navigator url="" class="weui-footer__link">底部链接文本</navigator>
+            </view>
+            <view class="weui-footer__text">Copyright © 2020 出入管理小程序</view>
+        </view>
+    </mp-msg>
+</view>

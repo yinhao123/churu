@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-msg": "../components/msg/msg"
+  },
+  "navigationBarTitleText": "提交成功",
+  "backgroundColor": "#07c160"
+}

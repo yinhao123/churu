@@ -105,6 +105,26 @@
 					"pathName": "pages/access/access",
 					"query": "scene=74b140b45e3e5f450c38f151527c94a0",
 					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "pages/record/record",
+					"pathName": "pages/record/record",
+					"query": "scene=74b140b45e3e5f450c38f151527c94a0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/weui/msg/msg",
+					"pathName": "pages/weui/msg/msg",
+					"query": "scene=74b140b45e3e5f450c38f151527c94a0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/result/success/success",
+					"pathName": "pages/result/success/success",
+					"scene": null
 				}
 			]
 		}

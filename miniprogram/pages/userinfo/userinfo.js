@@ -23,7 +23,6 @@ Page({
       title: '加载中',
     });
 
-    console.log("onLoad");
     var _openid = getApp().globalData.openid;
 
 
@@ -158,26 +157,20 @@ Page({
           status: 1
         },
         success: function (res) {
-          console.log(res)
+          console.log(res);
+          wx.showModal({
+            content: '提交成功',
+            showCancel:false,
+            success(res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
         }
       })
-      // db.collection('system_user').where({
-      //   _openid: getApp().globalData.openid
-      // }).update({
-      //   data: {
-      //     username: e.detail.value.username,
-      //     idcard: e.detail.value.idcard,
-      //     phonenumber: e.detail.value.phonenumber,
-      //     address: e.detail.value.address,
-      //     carnumber: e.detail.value.carnumber,
-      //     date: new Date(),
-      //     status: 1
-      //   },
-      //   success: function (res) {
-      //     // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-      //     console.log(res)
-      //   }
-      // })
     }
   
 

@@ -17,12 +17,19 @@
    
     "pages/userinfo/userinfo",
     "pages/access/access",
+    "pages/access/msg/info",
+    "pages/access/msg/fail",
     "pages/areainfo/areainfo",
     "pages/linkus/linkus",
     "pages/arealist/arealist",
     "pages/qrcode/qrcode",
     "pages/userlist/userlist",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/weui/msg/msg",
+    "pages/result/success/success",
+    "pages/result/fail/fail",
+    "pages/result/info/info"
+    
   
   ],
   "window": {
