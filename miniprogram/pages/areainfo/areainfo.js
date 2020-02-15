@@ -17,21 +17,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("show : " + options.show);
-      console.log("Test！！！！！！！！！！！！");
+    console.log("登录记录");
+    wx.showToast({
+      title: '请先授权',
+      icon: 'none',
+      duration: 2000
+    });
+    console.log(getApp().globalData.logged);
+    if (!getApp().globalData.logged) {
+      wx.navigateTo({
+        url: '/pages/loginwx/loginwx',
+      })
+    }
+   // console.log("show : " + options.show);
+    if(!options.show){
       this.setData({
         show: options.show
       })
-   console.log("status"+getApp().globalData.areainfo.status);
-    console.log(getApp().globalData.areainfo.address);
+    }
     var areainfo = getApp().globalData.areainfo;
-   this.setData({
-     region: areainfo.city ? areainfo.city:'',
-     address: areainfo.address ? areainfo.address:'',
-     phonenumber: areainfo.phonenumber ? areainfo.phonenumber:'',
-     linkperson: areainfo.linkperson?areainfo.linkperson:'',
-     name:areainfo.name?areainfo.name:''
-   })
+    // 判断 如果 areainfo未定义 则跳过去这一块
+    if (typeof areainfo != "undefined"){
+      console.log("status" + getApp().globalData.areainfo.status);
+      console.log(getApp().globalData.areainfo.address);
+
+      this.setData({
+        region: areainfo.city ? areainfo.city : '',
+        address: areainfo.address ? areainfo.address : '',
+        phonenumber: areainfo.phonenumber ? areainfo.phonenumber : '',
+        linkperson: areainfo.linkperson ? areainfo.linkperson : '',
+        name: areainfo.name ? areainfo.name : ''
+      })
+    }
+ 
   },
 
   /**
@@ -45,7 +63,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+  
   },
 
   /**
@@ -59,7 +77,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+  
   },
 
   /**
@@ -103,7 +121,23 @@ Page({
       },
       success: function (res) {
         // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-        console.log(res)
+        console.log(res);
+        if(res.errMsg == "collection.add:ok"){
+          wx.showModal({
+            showCancel:false,
+            content: '提交成功',
+            success(res) {
+              if (res.confirm) {
+                console.log('用户点击确定');
+                // 提交成功，返回到上一页
+                wx.switchTab({
+                  url: '/pages/arealist/arealist'
+                })
+              }
+            }
+          })
+        
+        }
       }
     });
 
@@ -120,5 +154,6 @@ Page({
       
     })
   },
+ 
 
 })

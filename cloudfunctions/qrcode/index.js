@@ -4,8 +4,8 @@ exports.main = async (event, context) => {
   try {
     const result = await cloud.openapi.wxacode.getUnlimited({
       scene: event.scene,
-      path:'/pages/access/access',
-      isHyaline:true
+      path:'/pages/access/access'
+    
     })
     console.log(result)
     return result

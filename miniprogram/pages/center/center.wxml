@@ -1,6 +1,7 @@
 <view class="">
+
   <!-- 头部信息 -->
-  <view class="head container bg-gradual-blue margin shadow">
+  <view class="head container bg-blue margin shadow" >
     <button 
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
@@ -8,9 +9,6 @@
       style="background-image: url({{avatarUrl}})"
       size="default"
     ></button>
-
-  <!-- <view class="cu-avatar xl round" style="background-image: url({{avatarUrl}});">
-    </view>  -->
     <view class="text-center margin-top margin-bottom-xl">
       {{userInfo.nickName?userInfo.nickName:'点击头像登录'}}
     </view>
@@ -18,17 +16,17 @@
   <!-- 中间信息 -->
   <view class="padding radius shadow">
       <view class="cu-list menu text-left solid-top">
-          <view class="cu-item" bindtap="navToAccessPage">
+          <!-- <view class="cu-item" bindtap="navToAccessPage">
             <view class="content">
               <text class="text-grey">出入登记</text>
             </view>
             <view class="action text-xxl">
              <view class="cuIcon-exit "></view>
             </view>
-          </view>
+          </view> -->
           <view class="cu-item" bindtap="navToUserInfoPage">
             <view class="content">
-              <text class="text-grey">完善信息</text>
+              <text class="text-grey">我的信息</text>
             </view>
            <view class="action text-xxl">
              <view class="cuIcon-edit "></view>

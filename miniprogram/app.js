@@ -15,7 +15,11 @@ App({
       })
     }
     this.onGetOpenid();
-    this.globalData = {}
+    this.authorize();
+    this.globalData = {
+      loginStatus:false,
+      logged:false
+    }
   },
   onGetOpenid: function () {
     // 调用云函数
@@ -51,6 +55,48 @@ App({
       fail() {
         return (new Error('ERROR_BASE64SRC_WRITE'));
       },
+    })
+  },
+
+  /**
+  * 登录状态
+  */
+  checkLoginStatus: function () {
+    // 如果已经登录，则放行，如果未登录则跳转到添加到社区信息页面
+    console.log(this.globalData.loginStatus);
+    if (typeof(this.globalData.loginStatus) == 'undefined'){
+      wx.showModal({
+       
+        content: '请先登记您的小区信息',
+        success(res) {
+          if (res.confirm) {
+            console.log('用户点击确定');
+            console.log("app.js 跳转到areainfo")
+            wx.navigateTo({
+              url: '/pages/areainfo/areainfo',
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+     
+    }
+  },
+  /**
+   * 检查授权状态
+   */
+  authorize:function(){
+    wx.checkSession({
+      success() {
+        //session_key 未过期，并且在本生命周期一直有效
+        console.log("授权未失效");
+      },
+      fail() {
+        // session_key 已经失效，需要重新执行登录流程
+        console.log("授权已经失效");
+        wx.login() //重新登录
+      }
     })
   }
 

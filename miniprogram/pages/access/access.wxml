@@ -1,30 +1,45 @@
 <view class="padding">
   <form bindsubmit="formSubmit">
   <view class="cu-form-group margin-top">
-      <view class="title">单位名称</view>
+      <view class="title">社区名称</view>
       <input placeholder="社区名称" value="{{name}}" disabled="true"></input>
     </view>
-    <view class="cu-form-group">
-      <view class="title">用户姓名</view>
-      <input placeholder="申请人姓名" value="{{username}}" disabled="true"></input>
-    </view>
+  	<view class="cu-form-group margin-top">
+		<view class="title">用户姓名</view>
+		<input name="username" value="{{username}}" placeholder=" 请输入姓名"></input>
+	</view>
+	<!-- <view class="cu-form-group">
+		<view class="title">身份证号</view>
+		<input name="idcard" value="{{idcard}}" placeholder="请输入身份证号码"></input>
+	</view> -->
+  <view class="cu-form-group">
+		<view class="title">手机号码</view>
+		<input name="phonenumber" value="{{phonenumber}}" placeholder="请输入手机号码"></input>
+	</view>
 
-    <radio-group class="block margin-top">
+  <view class="cu-form-group">
+		<view class="title">车牌号码</view>
+		<input name="carnumber" value="{{carnumber}}" placeholder="请输入车牌号"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">详细地址</view>
+		<input name="address" value="{{address}}" placeholder="请输入楼号单元房号"></input>
+	</view>
+
+    <radio-group class="block margin-top" bindchange="changeRadio">
 
       <view class="cu-form-group">
         <view class="title">申请出门</view>
-        <radio checked class="blue"></radio>
+        <radio value="1" checked class="blue"></radio>
       </view>
       <view class="cu-form-group">
         <view class="title">申请进入</view>
-        <radio class="blue"></radio>
+        <radio value="2"  class="blue"></radio>
       </view>
     </radio-group>
-
-
     <view class="cu-form-group margin-top">
       <view class="title">是否健康</view>
-      <switch class="blue" checked></switch>
+      <switch class="blue" value="health" checked bindchange="changeSwitch"></switch>
     </view>
     <view class="cu-form-group ">
       <view class="title">今日体温</view>
@@ -35,16 +50,8 @@
 		<view class="title">备注内容</view>
 		<textarea name="remark" maxlength="-1" disabled="{{modalName!=null}}"               bindinput="textareaBInput" placeholder="请输入备注"></textarea>
 	  </view>
-
  <view class="padding flex flex-direction">
   <button form-type="submit" class="cu-btn bg-blue lg">提交</button>
-  
 </view>
-
   </form>
-
-  <!-- <view class="padding flex flex-direction">
-  <button class="cu-btn bg-blue lg">提交</button>
-  
-</view> -->
 </view>

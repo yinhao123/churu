@@ -100,10 +100,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "pages/access/access",
 					"pathName": "pages/access/access",
-					"query": "scene=74b140b45e3e5f450c38f151527c94a0",
+					"query": "scene= oMLGB4jyxsObVGssZeKDTlQghxA9",
 					"scene": 1011
 				},
 				{
@@ -124,6 +124,27 @@
 					"id": -1,
 					"name": "pages/result/success/success",
 					"pathName": "pages/result/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/loginwx/loginwx",
+					"pathName": "pages/loginwx/loginwx",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/push/push",
+					"pathName": "pages/push/push",
+					"query": "scene= oMLGB4jyxsObVGssZeKDTlQghxA9",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "scene= oMLGB4jyxsObVGssZeKDTlQghxA9",
 					"scene": null
 				}
 			]

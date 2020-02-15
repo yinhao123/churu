@@ -62,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  copyInfo:function(){
+    wx.setClipboardData({
+      data: 'https://github.com/yinhao123/churu',
+      success(res) {
+        wx.getClipboardData({
+          success(res) {
+            console.log(res.data) // data
+          }
+        })
+      }
+    })
   }
 })

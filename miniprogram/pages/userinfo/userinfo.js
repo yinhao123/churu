@@ -163,7 +163,10 @@ Page({
             showCancel:false,
             success(res) {
               if (res.confirm) {
-                console.log('用户点击确定')
+                console.log('用户点击确定');
+                wx.navigateBack({
+                  
+                })
               } else if (res.cancel) {
                 console.log('用户点击取消')
               }

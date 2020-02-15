@@ -7,7 +7,8 @@ Page({
   data: {
     avatarUrl: './user-unlogin.png',
     userInfo: {},
-    app:getApp()
+    app:getApp(),
+    bgurl:'/static/image/bg.png'
   },
 
   /**
@@ -126,7 +127,16 @@ Page({
   /**
    * 跳转到我也要用
    */
-  navToAreaInfoPage:function() {
+  navToAreaInfoPage:function(){
+    wx.switchTab({
+      url: '/pages/arealist/arealist'
+    })
+  },
+  /**
+   * 这个方法暂时没用了 2020年2月14日15:50:54
+   */
+  navToAreaInfoPages:function() {
+    
     // 首先获取数据验证当前用户是否已经填写小区信息
     var localOpenid =  this.data.app.globalData.openid;
 
@@ -164,6 +174,7 @@ Page({
       }
     });
   },
+
   navToLinkusPage:function(){
     wx.navigateTo({
       url: '/pages/linkus/linkus',
@@ -171,6 +182,7 @@ Page({
   },
   onGetUserInfo: function (e) {
     if (!this.data.logged && e.detail.userInfo) {
+      getApp().globalData.logged = true;
       this.setData({
         logged: true,
         avatarUrl: e.detail.userInfo.avatarUrl,

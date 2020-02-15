@@ -12,9 +12,6 @@
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room",
-   
     "pages/userinfo/userinfo",
     "pages/access/access",
     "pages/access/msg/info",
@@ -28,16 +25,33 @@
     "pages/weui/msg/msg",
     "pages/result/success/success",
     "pages/result/fail/fail",
-    "pages/result/info/info"
-    
-  
+    "pages/result/info/info",
+    "pages/loginwx/loginwx",
+    "pages/push/push"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0081ff",
-    "navigationBarTitleText": "出入管理",
+    "navigationBarTitleText": "智云出入管理",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor":"#0081ff",
+    "list": [
+      {
+        "pagePath": "pages/center/center",
+        "text": "主页",
+        "iconPath":"/static/icon/homepage.png",
+        "selectedIconPath":"/static/icon/homepage_fill.png"
+      },
+      {
+        "pagePath": "pages/arealist/arealist",
+        "text": "管理",
+        "iconPath": "/static/icon/people.png",
+        "selectedIconPath": "/static/icon/people_fill.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

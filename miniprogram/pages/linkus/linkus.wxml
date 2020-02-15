@@ -1,13 +1,25 @@
 <view class='margin-xl bg-gradual-blue padding-xl radius shadow-lg'>
   <view class='text-center margin-bottom text-lg  '>关于出入管理系统</view>
   <view class='text-content'>
-    <view>Hi！各位出入管理的使用者！</view>
-    <view class='margin-top-sm'>该项目是一款管理社区出入微信小程序。该项目有如下特点：</view>
-     <view class='margin-top-sm'>省时：微信扫一扫即可登记，减少人员接触和聚集。</view>
-     <view class='margin-top-sm'>省力：无需重复输入信息，出入信息登记准确。</view>
+    <view>Hi！Everybody！</view>
+    <view class='margin-top-sm'>本项目是为了方便在疫情期间小区人员出入管理，开发的一款管理社区出入微信小程序。该项目有如下特点：</view>
+     <view class='margin-top-sm'>省时安全：微信扫一扫即可登记，减少人员接触和聚集。</view>
+     <view class='margin-top-sm'>省力准确：无需重复输入信息，出入信息登记准确。</view>
     <view class='margin-top-sm'>查询便捷：管理人员方便查看登记信息。</view>
     <view class='margin-top-sm'>统计方便：方便导出出入日志信息。进行进一步统计。</view>
-    <view class='margin-top-sm'>如有问题，请发送邮件到yinhao1205@qq.com。</view>
+    <view class='margin-top-sm'>免费开源：可自行下载代码，根据自己的需求修改代码，部署小程序。该小程序使用微信云开发，无需购买部署服务器，免除运维的烦恼。</view>
+    <view class='margin-top-sm'>项目开源地址：https://github.com/yinhao123/churu，如果你觉得该小程序对你有用，可根据文档说明，可根据说明自行安装使用。
+    <view class=" flex flex-direction margin-top-xl">
+    <button class="cu-btn text-blue bg-gray"  bindtap="copyInfo">复制链接</button>
+    </view>
+    </view>
+    <view class='margin-top-sm'>如有问题，请戳下边按钮联系我。</view>
     <view class='margin-top-sm'>更多功能敬请期待！ ٩(๑❛ᴗ❛๑)۶</view>
+    <view class='margin-top-sm text-red'>武汉加油！中国加油！</view>
   </view>
+  
+<view class=" flex flex-direction margin-top-xl">
+  <button open-type="contact" class="cu-btn text-blue bg-gray lg shadow">联系我</button>
+  
+</view>
 </view>

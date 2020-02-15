@@ -1,6 +1,6 @@
 <!--我也要用页面-->
 <view class="padding">
-<form bindsubmit="formSubmit margin-top">
+<form bindsubmit="formSubmit" >
 
  <view class="cu-form-group ">
 		<view class="title">单位名称</view>
@@ -28,8 +28,8 @@
 		<view class="title">联系方式</view>
 		<input name="phonenumber" value="{{phonenumber}}"  placeholder="请输入联系人员的手机号码"></input>
 	</view> 
-  <view wx:if="{{show}}" class="flex margin-top">
-   <button disabled="{{show}}" form-type="submit" class="cu-btn bg-blue lg">保存</button>
+  <view  class="flex margin-top">
+   <button  form-type="submit" class="cu-btn bg-blue lg">保存</button>
   </view>
 </form>
 
