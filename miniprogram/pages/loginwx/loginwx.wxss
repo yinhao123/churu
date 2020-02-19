@@ -1,0 +1,4 @@
+/* pages/loginwx/loginwx.wxss */
+.cr-body{
+  height: 600rpx;
+}

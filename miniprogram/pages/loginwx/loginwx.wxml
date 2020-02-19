@@ -1,0 +1,13 @@
+<!-- 登录微信页面，这个页面可有可无，为了好看就留着了 -->
+<view  class="cr-body flex align-center justify-center">
+  <view>
+  </view>
+    <view class="">
+      <button class="cu-btn block bg-blue margin-tb-sm lg"  
+       open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      >登录微信</button>
+    </view>
+
+</view> 
+
